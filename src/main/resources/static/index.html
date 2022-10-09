@@ -111,8 +111,8 @@ html{
 		if(confirm('Deseja realmente deletar?'))
 		{
 		$.ajax({
-			method: "DELETE", /* VAI SER POST PORQUE VAI O ENDPOINT SALVAR RECEBE O METODO POST*/
-			url: "delete", /*VAI CHAMAR A URL E PESQUISAR DO ENDPOINT*/
+			method: "DELETE",
+			url: "delete", 
 			data: "iduser=" + id,/*O QUE FOR PASSADO NO ID VAI JOGAR NO ENDPOINT NO PARAMETRO IDUSER*/
 			success: function(response) 
 			{
@@ -135,7 +135,7 @@ html{
 		if(nome != null && nome.trim() != '') //SE O NOME FOR DIFERENTE DE NULL E DIFERENTE DE VAZIO
 		{						
 			$.ajax({
-				method: "GET", /* VAI SER POST PORQUE VAI O ENDPOINT SALVAR RECEBE O METODO POST*/
+				method: "GET", 
 				url: "buscarPorNome", /*VAI CHAMAR A URL E PESQUISAR DO ENDPOINT*/
 				data: "name=" + nome,
 				success: function(response) 
@@ -159,7 +159,7 @@ html{
 	function colocarEmEdicao(id)
 	{
 		$.ajax({
-			method: "GET", /* VAI SER POST PORQUE VAI O ENDPOINT SALVAR RECEBE O METODO POST*/
+			method: "GET", 
 			url: "buscaruserid", /*VAI CHAMAR A URL E PESQUISAR DO ENDPOINT*/
 			data: "iduser=" + id,/*O QUE FOR PASSADO NO ID VAI JOGAR NO ENDPOINT NO PARAMETRO IDUSER*/
 			success: function(response) 
